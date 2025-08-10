@@ -24,16 +24,17 @@ pipeline {
         
         stage('Publish Report') {
             steps {
-                publishHTML target: [
+                publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: 'target/surefire-reports',
+                    reportDir: 'target',
                     reportFiles: 'emailable-report.html',
                     reportName: 'HTML Report'
-                ]
+                ])
             }
         }
+
     }
     
     post {
