@@ -7,6 +7,12 @@ pipeline {
     }
     
     stages {
+        steps {
+        sh 'java -version'
+        sh 'mvn -v'
+        sh 'printenv'  
+        }
+
         stage('Checkout') {
             steps {
                 git branch: 'main',
