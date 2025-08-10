@@ -53,3 +53,6 @@ ParaBank is a real-world online banking application that enables users to manage
 ## Test Reports
 After test completion, reports can be found at:  
 `.txt files in target/surefire-reports/ directory`
+
+## CI/CD Integration(Jenkins)
+The created Playwright test automation framework has been integrated into Jenkins (from a local instance), enabling test execution triggered via pipelines. The Jenkinsfile is located in the project root directory.
