@@ -15,8 +15,10 @@ pipeline {
         }
         
         stage('Build & Test') {
-            dir('parabank-automation-framework') { 
-                sh 'mvn clean install'
+            steps {  
+                dir('parabank-automation-framework') { 
+                    sh 'mvn clean install'
+                }
             }
         }
         
