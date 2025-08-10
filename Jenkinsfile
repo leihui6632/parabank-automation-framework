@@ -21,19 +21,6 @@ pipeline {
                 }
             }
         }
-        
-        stage('Publish Report') {
-            steps {
-                publishHTML(target: [
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: 'target',
-                    reportFiles: 'emailable-report.html',
-                    reportName: 'HTML Report'
-                ])
-            }
-        }
 
     }
     
